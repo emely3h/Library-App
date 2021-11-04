@@ -3,17 +3,17 @@
 This is a very basic library app as assesment project for the SE_01 module.
 
 So far the basic features are:
-*A user can register and login (with proper form validators and error messages).
-    A user can logout.
-    A user can add books to the bookshelf.
-    The bookshelf provides an alphabetical overview of all books.
-    Detail view for every book.
-    A user can add a book to the reading list.
-    A user can rent a book.
-    In the profile page every user has an overview of the reading books and the currently rented books with their
-    duedate.
-    A user can remove books from the reading list.
-    A user can give back rented books.
+
+* A user can register and login (with proper form validators and error messages).
+* A user can logout.
+* A user can add books to the bookshelf.
+* The bookshelf provides an alphabetical overview of all books.
+* Detail view for every book.
+* A user can add a book to the reading list.
+* A user can rent a book.
+* In the profile page every user has an overview of the reading books and the currently rented books with their duedate.
+* A user can remove books from the reading list.
+* A user can give back rented books.
 
 However the app is not even close to being finised. Some next steps would be:
 
