@@ -1,6 +1,6 @@
 from flask import Flask
 from app import authentication, simple_pages
-
+import os
 from app.extensions.database import db, migrate
 from app.extensions.authentication import login_manager
 
@@ -8,6 +8,7 @@ def create_app():
   app = Flask(__name__)
 
   app.config.from_object('app.config')
+  app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL').replace("://", "ql://", 1) if os.environ.get('DATABASE_URL') else 'sqlite:///database.db'
 
   register_extensions(app)
   register_blueprints(app)
