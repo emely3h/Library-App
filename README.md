@@ -1,8 +1,30 @@
-# Demo Flask App
+# Flask Library App
 
-This Demo application is meant to show how you could structure your Flask application. 
+This is a very basic library app as assesment project for the SE_01 module.
 
-It uses Blueprints, databases, migrations, authentication and shows you how you could split all these different parts into different folders.
+So far the basic features are:
+    A user can register and login (with proper form validators and error messages).
+    A user can logout.
+    A user can add books to the bookshelf.
+    The bookshelf provides an alphabetical overview of all books.
+    Detail view for every book.
+    A user can add a book to the reading list.
+    A user can rent a book.
+    In the profile page every user has an overview of the reading books and the currently rented books with their
+    duedate.
+    A user can remove books from the reading list.
+    A user can give back rented books.
+
+However the app is not even close to being finised. Some next steps would be:
+
+  Books in reading list should be unique
+  Only an admin should be allowed to add books to the bookshelf.
+  Error handling for db errors
+  Deploy to Heruku
+  Handle multiple similar books.
+  Admin overview of currently rented books + due date + possibility to edit a book.
+
+
 
 ## Local Setup
 
