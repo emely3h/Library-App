@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div>
+  <h1>My Profile</h1>
+  Hi {{ current_user.name }}!
+  <h4>My rented books</h4>
+  {% if not rented_list %}
+  <p>You haven't rented any books at the moment.</p>
+  {% else %}
+  {% for book in rented_books_list %}
+  <div class="card" id='custom-card' style="width: 70%">
+    <div class="card-body">
+      <h5 class="card-title">{{book.title}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted"> {{book.author}}</h6>
+      <p class="card-text">Due Date: {{ rented_list[loop.index -1].end_date.strftime('%Y-%m-%d') }} </p>
+      <a href="#" class="card-link">Details</a>
+      <form action="/return-book/book.id" method="post">
+        <button>Give back</button>
+      </form>
+    </div>
+  </div>
+    {% endfor %}
+
+  {% endif %}
+  <br>
+  <h4>My reading list</h4>
+  {% if not book_list %}
+  <p>Your reading list is currently empty.</p>
+  {% else %}
+  {% for book in book_list %}
+  <div class="card" id='custom-card' style="width: 70%">
+    <div class="card-body">
+      <h5 class="card-title">{{ book.title }}</h5>
+      <a href="book/{{book.id}}" class="card-link">Details</a>
+      <form action="/remove-from-reading-list/{{ book.id }}" method="post">
+        <button name="add-to-reading-list" value="add-to-reading-list">Remove from reading list</button>
+      </form>
+    </div>
+  </div>
+  {% endfor %}
+  {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h3>Registration</h3>
+
+<form method='POST' action='/registration'>
+    {{ form.csrf_token }}
+    <p>
+        {{ form.name.label }}
+        {{ form.name }}
+    </p>
+    <p>
+        {{ form.email.label }}
+        {{ form.email }}
+    </p>
+    <p>
+        {{ form.password.label }}
+        {{ form.password }}
+    </p>
+    <p>
+        {{ form.confirm_password.label }}
+        {{ form.confirm_password }}
+    </p>
+    <p style='color: red'>
+        {% for field, errors in form.errors.items() %}
+        {{ ', '.join(errors) }}
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.submit }}
+    </p>
+</form>
+{% endblock %}

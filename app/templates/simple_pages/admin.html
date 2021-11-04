@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<h1>Admin Page</h1>
+<p>As an admin you can add books to the database and see at all time who currently has rented the book.</p>
+<p>To view the admin page you have to be logged in as the admin. All other users don't have access.</p>
+<h3>Add a book to the database</h3>
+<form method='POST' action='/add-book-to-bookshelf'>
+    {{ form.csrf_token }}
+    <p>
+        {{ form.title.label }}
+        {{ form.title }}
+    </p>
+    <p>
+        {{ form.author.label }}
+        {{ form.author }}
+    </p>
+    <p>
+        {{ form.description.label }}
+        {{ form.description }}
+    </p>
+    <p>
+        {{ form.submit }}
+    </p>
+
+</form>
+{% endblock %}

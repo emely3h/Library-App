@@ -28,3 +28,4 @@ def register_blueprints(app: Flask):
 
   return None
 
+# registration + login validation error handeling

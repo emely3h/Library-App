@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<h1>{{ book.title }}, by {{ book.author }}</h1>
+<p>{{ book.description }}</p>
+{% if book.status == True %}
+<p>Book is currently available.</p>
+{% else %}
+<p>Book is currently rented.</p>
+{% endif %}
+
+{% endblock %}

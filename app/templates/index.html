@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+{% if current_user.is_authenticated %}
+<h5>Hi {{ current_user.name }} {{ current_user.id }}! You are logged in.</h5>
+{% else %}
+<h5>You are not logged in.</h5>
+{% endif %}
+<br>
+<h3>Features</h3>
+<ul>
+    <li>A user can register and login (with proper form validators and error messages).</li>
+    <li>A user can logout.</li>
+    <li>A user can add books to the bookshelf.</li>
+    <li>The bookshelf provides an alphabetical overview of all books.</li>
+    <li>Detail view for every book.</li>
+    <li>A user can add a book to the reading list.</li>
+    <li>A user can rent a book.</li>
+    <li>In the profile page every user has an overview of the reading books and the currently rented books with their
+        duedate.</li>
+    <li>A user can remove books from the reading list.</li>
+    <li>A user can give back rented books.</li>
+</ul>
+<h3>Links</h3>
+<ul>
+    <li>Structure of the <a href='/dbschema'>DB schema</a></li>
+    <li><a href='https://github.com/emely3h/Library-App'>Github repository</a></li>
+</ul>
+<h3>Next steps</h3>
+<ul>
+    <li>Books in reading list should be unique</li>
+    <li>Only an admin should be allowed to add books to the bookshelf.</li>
+    <li>Error handling for db errors</li>
+    <li>Deploy to Heruku</li>
+    <li>Handle multiple similar books.</li>
+    <li>Admin overview of currently rented books + due date + possibility to edit a book.</li>
+</ul>
+{% endblock %}
