@@ -1,0 +1,1 @@
+web: gunicorn flask-structure-demo:run
