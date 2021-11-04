@@ -17,12 +17,12 @@ So far the basic features are:
 
 However the app is not even close to being finised. Some next steps would be:
 
-  Books in reading list should be unique
-  Only an admin should be allowed to add books to the bookshelf.
-  Error handling for db errors
-  Deploy to Heruku
-  Handle multiple similar books.
-  Admin overview of currently rented books + due date + possibility to edit a book.
+* Books in reading list should be unique
+* Only an admin should be allowed to add books to the bookshelf.
+* Error handling for db errors
+* Deploy to Heruku
+* Handle multiple similar books.
+* Admin overview of currently rented books + due date + possibility to edit a book.
 
 
 
