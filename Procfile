@@ -1,1 +1,1 @@
-web: gunicorn flask-structure-demo:run
+web: gunicorn run:app
