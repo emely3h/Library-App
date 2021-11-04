@@ -3,7 +3,7 @@
 This is a very basic library app as assesment project for the SE_01 module.
 
 So far the basic features are:
-    A user can register and login (with proper form validators and error messages).
+*A user can register and login (with proper form validators and error messages).
     A user can logout.
     A user can add books to the bookshelf.
     The bookshelf provides an alphabetical overview of all books.
