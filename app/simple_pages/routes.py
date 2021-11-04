@@ -13,8 +13,7 @@ blueprint = Blueprint('simple_pages', __name__)
 
 @blueprint.route("/", methods=['GET'])
 def home():
-    all_users = User.query.all()
-    return render_template('index.html', users = all_users)
+    return render_template('index.html')
 
 @blueprint.route('/admin')
 def admin():
